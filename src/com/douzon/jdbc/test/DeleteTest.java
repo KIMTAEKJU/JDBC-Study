@@ -39,7 +39,7 @@ public class DeleteTest
 			// 4. SQL문 실행
 			String sql = "delete from pet where name = '" + name + "'";  // JDBC문제점 실수할가능성이 높음
 			int count = stmt.executeUpdate(sql); //  executeUpdate
-			result = count >= 1;
+			result = count >= 1;																																																																						
 		} 
 		catch (ClassNotFoundException e) 
 		{
