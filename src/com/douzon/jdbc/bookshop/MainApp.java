@@ -32,7 +32,9 @@ public class MainApp
 		bookVo.setStatus("대여중");
 		bookVo.setNo(no);
 		
-		new BookDao().updateStatus(bookVo);
+		BookDao bookDao = new BookDao();
+		bookDao.updateStatus(bookVo);
+		bookDao.getBookName(no);
 	}
 	
 	public static void displayBookInfo()

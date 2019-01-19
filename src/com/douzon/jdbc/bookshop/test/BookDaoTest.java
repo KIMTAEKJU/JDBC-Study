@@ -11,7 +11,16 @@ public class BookDaoTest
 	{
 		//insertTest("이클립스", 2);
 		//insertTest("브레이킹던", 2);
-
+//		insertTest("트와일라잇", 1);
+//		insertTest("뉴문", 1);
+//		insertTest("아리랑", 3);
+//		insertTest("젊은그들", 4);
+//		insertTest("아프니까 청춘이다", 5);
+//		insertTest("아프니까 청춘이다", 5);
+//		insertTest("귀천", 2);
+//		insertTest("풀하우스", 6);
+//		insertTest("태백산맥", 3);
+		
 		getListTest();
 	}
 	

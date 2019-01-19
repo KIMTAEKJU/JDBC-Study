@@ -104,6 +104,47 @@ public class BookDao
 		return result;
 	}
 	
+	public void getBookName(long no)
+	{
+		Connection conn = null;
+		java.sql.Statement stmt = null;
+		ResultSet rs = null;
+		
+		try 
+		{
+			conn = getConnection();
+			
+			stmt = conn.createStatement();
+			
+			String sql = "select title from book where no = " + no;
+			rs = stmt.executeQuery(sql);
+			
+			if (rs.next())
+				System.out.println(rs.getString(1) + " 이(가) 대여 됐습니다.");
+			else
+				System.out.println("책이 존재하지않습니다");
+			
+		} 
+		catch (Exception e) 
+		{
+			System.out.println("error : " + e);
+		}
+		finally 
+		{
+			try {
+				if (rs != null)
+					rs.close();
+				if (stmt != null)
+					stmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public List<BookVo> getList()
 	{
 		List<BookVo> list = new ArrayList<BookVo>();
